@@ -1,5 +1,8 @@
 # Hardware-Keylogger-TeensyBoard-
 
+![Screenshot](mapi.png)
+![Screenshot](all.jpg)
+
 First, you have to modify the  Sd2PinMap.h
 
 ```
