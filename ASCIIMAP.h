@@ -1,25 +1,3 @@
-# Hardware-Keylogger-TeensyBoard-
-
-First, you have to modify the  Sd2PinMap.h
-
-```
-// SPI ports options for the Teensy Board
- uint8_t const SS_PIN = 20 ; // Slave Select
- uint8_t const MOSI_PIN = 22; // Master Output Slave Input
- uint8_t const MISO_PIN = 23; // Master Input Slave Output
- uint8_t const SCK_PIN = 21; // Serial Clock
-
- // These values can found here too
- // https:// www.pjrc.com/teensy/td_libs_SPI.html
-
-```
-
-If you want to attach the Keylogger on German Keyboard, you have to REMAP the ASCII-MAP
-
-
-```
-
-
 // ASCII−MAP
 /* ***A M E R I C A N - - - K E Y B O A R D *** */
 const KEYCODE_TYPE PROGMEM keycodes_ascii[] = {
@@ -47,7 +25,8 @@ const KEYCODE_TYPE PROGMEM keycodes_ascii[] = {
  M(ASCII_74), M(ASCII_75) ,M(ASCII_76), M(ASCII_77),
  M(ASCII_78), M(ASCII_79), M(ASCII_7A), M(ASCII_7B),
  M(ASCII_7C), M(ASCII_7D), M(ASCII_7E), M(ASCII_7F)
- }
+ } 
+
 
 
 /* ***G E R M A N - - - K E Y B O A R D *** */
@@ -73,22 +52,23 @@ const KEYCODE_TYPE PROGMEM keycodes_ascii[] = {
  M(ASCII_68), M(ASCII_69), M(ASCII_6A), M(ASCII_6B),
  M(ASCII_6C), M(ASCII_6D), M(ASCII_6E), M(ASCII_6F),
  M(ASCII_70), M(ASCII_71), M(ASCII_72), M(ASCII_73),
-                                                                                                                                                                                         1,14-12    Anfang
+ M(ASCII_74), M(ASCII_75) ,M(ASCII_76), M(ASCII_77),
+ M(ASCII_78), M(ASCII_79), M(ASCII_7A), M(ASCII_7B),
+ M(ASCII_3E), M(ASCII_2A), M(ASCII_27), M(ASCII_7F)
+ }
 
-/** Alternative assign directily the USB-HID Scancode**/
+
+/** Alternative assign directily the Scancode**/
 
 // keyboard layouts.h
 /** Ursprüngliche Form **/
 #define KEY_Y ( 28 | 0xF000 )
 #define KEY_Z ( 29 | 0xF000 )
 
-// Modifizierte Form
+// Modifizierte Form 
  #define KEY_Y ( 29 | 0xF000 )
 // Die Taste KEY_Y hat jetzt den USB HID Scancode 0xF029
 
  #define KEY_Z ( 28 | 0xF000 )
 //Die Taste KEY_Z hat jetzt den USB HID Scancode 0xF028
-
-```
-
 
