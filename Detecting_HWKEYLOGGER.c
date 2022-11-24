@@ -19,17 +19,17 @@ buffer[6] = ’f’;
 buffer[7] = ’f’;
 
 int len = 0 ;
-libusb _ device_ handle ∗ check ; // handle
-libusb _ device ∗ dev ;
-libusb _ context ∗ ctx = NULL;
+libusb_device_handle ∗ check ; // handle
+libusb_device ∗ dev ;
+libusb_context ∗ ctx = NULL;
 int r ;
 ssize_t cnt;
 r = libusb_init(&ctx) ; //Session wird  erstellt
 check = libusb_open_device_with_vid_pid ( ctx , 0 x0461 , 0 x4dbf ) ; 
 //Gerät wird geöffnet
 
- i f ( check == NULL)
-{ cout << ”ERROR” << e n d l ; 
+ if(check == NULL)
+{ cout << ”ERROR” << endl; 
 //Gerät konnte nicht geöffnet werden
 return 1;
 }
