@@ -78,7 +78,7 @@ const KEYCODE_TYPE PROGMEM keycodes_ascii[] = {
  M(ASCII_70), M(ASCII_71), M(ASCII_72), M(ASCII_73),
                                                                                                                                                                                          1,14-12    Anfang
 
-/** Alternative assign directily the USB-HID Scancode**/
+/** Alternative assign directly the USB-HID Scancode**/
 
 // keyboard layouts.h
 /** Ursprüngliche Form **/
