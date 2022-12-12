@@ -25,7 +25,7 @@ libusb_context ∗ ctx = NULL;
 int r ;
 ssize_t cnt;
 r = libusb_init(&ctx) ; //Session wird  erstellt
-check = libusb_open_device_with_vid_pid ( ctx , 0 x0461 , 0 x4dbf ) ; 
+check = libusb_open_device_with_vid_pid ( ctx , 0x0461 , 0x4dbf ) ; 
 //Gerät wird geöffnet
 
  if(check == NULL)
