@@ -56,7 +56,7 @@ cout << ”ACTIVE 1 ” << act2 << endl ;
  /∗ USB Reset wird  durch geführt , falls die Tastatur beim  ersten Interrupt −Transfer kein Reset durchgeführt ∗/
  libusb_reset_device(check) ;
 /∗ Interrupt −Transfer wird durchgeführt ∗/
-libusb _ interrupt_transfer(check , ENDPOINT_IN, buffer , sizeof(buffer) , &len , 0 ) ;
+libusb_interrupt_transfer(check , ENDPOINT_IN, buffer , sizeof(buffer) , &len , 0 ) ;
 
 
  /∗ Byte wird aus dem Puffer gelesen ∗/
